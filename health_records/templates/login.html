@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Secure Health System</h1>
+    <form method="POST">
+        <label>Username:</label><br>
+        <input type="text" name="username" required><br>
+
+        <label>Password:</label><br>
+        <input type="password" name="password" required><br>
+
+        <label>Select Group:</label><br>
+        <select name="user_group" required>
+            <option value="H">Group H (Admin)</option>
+            <option value="R">Group R (Researcher)</option>
+        </select><br>
+
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>

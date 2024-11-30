@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Record</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Update Record {{ record_id }}</h1>
+    <form method="POST">
+        <label for="column">Column to Update:</label><br>
+        <input type="text" id="column" name="column" required><br>
+
+        <label for="new_value">New Value:</label><br>
+        <input type="text" id="new_value" name="new_value" required><br>
+
+        <button type="submit">Update</button>
+    </form>
+    <a href="/view_records">Back to Records</a>
+</body>
+</html>
