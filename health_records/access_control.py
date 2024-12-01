@@ -1,12 +1,5 @@
-import mysql.connector
 
-db_config = {
-    "host": "localhost",
-    "user": "root",
-    "password": "Homesh@99",
-    "database": "secure_health_db"
-}
- 
+
 def query_data(user_group):
     """
     Retrieve data from the health_info table based on the user's group.
