@@ -16,14 +16,7 @@ list_of_files = [
     f"{project_name}/templates/index.html",
     f"{project_name}/static/style.css",
     f"{project_name}/main.py",
-    f"{project_name}/access_control.py",
-    f"{project_name}/authentication.py",
-    f"{project_name}/confidentiality.py",
-    f"{project_name}/db_setup.py",
-    f"{project_name}/integrity.py",
-    f"{project_name}/requirements.txt",
-    f"{project_name}/setup.py",
-    f"{project_name}/.dockerignore"
+    
 ]
 
 # Create directories and empty files
