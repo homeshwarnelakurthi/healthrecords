@@ -43,24 +43,7 @@ def view_records():
     data = query_data(user_group)
     return render_template("view_records.html", records=data, user_group=user_group)
 
-@app.route("/update/<int:record_id>", methods=["GET", "POST"])
-def update(record_id):
-    if "username" not in session or session.get("user_group") != "H":
-        flash("You do not have permission to access this page.")
-        return redirect("/dashboard")
-    
-    if request.method == "POST":
-        column = request.form["column"]
-        new_value = request.form["new_value"]
-        updates = {column: new_value}
-        success = update_data(session.get("user_group"), record_id, updates)
-        if success:
-            flash(f"Record {record_id} updated successfully.")
-        else:
-            flash(f"Failed to update record {record_id}.")
-        return redirect("/view_records")
-    
-    return render_template("update_record.html", record_id=record_id)
+
 
 @app.route("/delete/<int:record_id>", methods=["POST"])
 def delete(record_id):

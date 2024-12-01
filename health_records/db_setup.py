@@ -36,7 +36,7 @@ def initialize_database():
     """)
 
     users = [
-        {"username": "root", "password": "Homesh@99", "user_group": "H"},
+        {"username": "homi", "password": "Homesh@99", "user_group": "H"},
         {"username": "swaroop", "password": "password1", "user_group": "R"},
         {"username": "yamini", "password": "password2", "user_group": "R"}
     ]
