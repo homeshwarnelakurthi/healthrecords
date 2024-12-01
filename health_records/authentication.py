@@ -14,7 +14,9 @@ def authenticate_user(username, password):
         )
         cursor = conn.cursor()
 
-
+        # Retrieve the stored password and user group for the provided username
+        cursor.execute("SELECT password, user_group FROM users WHERE username = %s", (username,))
+        result = cursor.fetchone()
 
         if result is None:
             print("User not found.")
