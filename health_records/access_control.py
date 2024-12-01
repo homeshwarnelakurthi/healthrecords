@@ -66,3 +66,22 @@ def update_data(user_group, record_id, updates):
         cursor.close()
         conn.close()
 
+
+def delete_data(record_id):
+    """
+    Delete a specific record from the health_info table by its ID.
+    """
+    try:
+        conn = mysql.connector.connect(**db_config)
+        cursor = conn.cursor()
+
+        query = "DELETE FROM health_info WHERE id = %s"
+        cursor.execute(query, (record_id,))
+        conn.commit()
+        return True
+    except mysql.connector.Error as err:
+        print(f"Database error: {err}")
+        return False
+    finally:
+        cursor.close()
+        conn.close()
