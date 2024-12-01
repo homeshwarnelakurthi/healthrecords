@@ -49,4 +49,6 @@ def initialize_database():
             ON DUPLICATE KEY UPDATE password = VALUES(password), user_group = VALUES(user_group)
         """, (user["username"], hashed_password, user["user_group"]))
 
-
+    conn.commit()
+    cursor.close()
+    conn.close()
