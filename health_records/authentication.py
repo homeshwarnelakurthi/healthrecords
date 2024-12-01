@@ -34,12 +34,4 @@ def authenticate_user(username, password):
         else:
             print("Invalid password.")
             return None
-    except mysql.connector.Error as err:
-        print(f"Database error: {err}")
-        return None
-    except Exception as e:
-        print(f"Unexpected error: {e}")
-        return None
-    finally:
-        cursor.close()
-        conn.close()
+    
