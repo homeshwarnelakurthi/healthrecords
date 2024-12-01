@@ -6,3 +6,4 @@ def generate_hash(data):
 
 def verify_data_integrity(data, hash_value):
     return generate_hash(data) == hash_value
+

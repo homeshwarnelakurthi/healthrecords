@@ -24,6 +24,7 @@ list_of_files = [
     f"{project_name}/requirements.txt",
     f"{project_name}/setup.py",
     f"{project_name}/.dockerignore"
+    
 ]
 
 # Create directories and empty files

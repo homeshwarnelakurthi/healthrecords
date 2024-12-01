@@ -24,9 +24,8 @@ def initialize_database():
             height FLOAT,
             health_history TEXT
         )
-    """)
+  )
 
-      # Create users table
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS users (
             username VARCHAR(50) PRIMARY KEY,

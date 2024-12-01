@@ -66,6 +66,7 @@ def update_data(user_group, record_id, updates):
         cursor.close()
         conn.close()
 
+
 def delete_data(record_id):
     """
     Delete a specific record from the health_info table by its ID.
