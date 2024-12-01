@@ -24,10 +24,8 @@ def initialize_database():
             height FLOAT,
             health_history TEXT
         )
-    """)
+  )
 
-   
- # Create users table
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS users (
             username VARCHAR(50) PRIMARY KEY,
@@ -41,6 +39,7 @@ def initialize_database():
         {"username": "swaroop", "password": "password1", "user_group": "R"},
         {"username": "yamini", "password": "password2", "user_group": "R"}
     ]
+  
 
     for user in users:
         hashed_password = bcrypt.hashpw(user["password"].encode(), bcrypt.gensalt())
